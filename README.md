@@ -11,3 +11,38 @@ Useful for running assertions locally in a dev or CI environment to validate any
 # Running
 
 `./robotstxtrun.sh /path/to/robotstxtrun.json`
+
+# Example
+
+Given a json file with the following config:
+
+```json
+{
+  "domain": "example.org",
+  "userAgent": "Googlebot",
+  "disallowedPaths": ["/login"],
+  "allowedPaths": ["/shop"]
+}
+```
+
+and a `robots.txt` file:
+
+```txt
+User-agent: *
+Disallow: /login$
+```
+
+will result in the following output:
+
+```sh
+all assertions passed
+```
+
+being printed to the console
+
+Using the default configuration file in the repo, will result in the following output:
+
+```
+Expected: /this/should/be/disallowed to be DISALLOWED, but was ALLOWED
+number of failed assertions: 1
+```

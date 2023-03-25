@@ -1,6 +1,0 @@
-{
-  "domain": "example.org",
-  "userAgent": "Googlebot",
-  "disallowedPaths": ["/shouldbeblocked"],
-  "allowedPaths": ["/shouldbeallowed"]
-}

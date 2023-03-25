@@ -19,7 +19,4 @@ RUN mkdir c-build && cd c-build && \
     make && \
     make test
 
-COPY validate.sh .
-RUN chmod +x validate.sh
-
-ENTRYPOINT [ "./validate.sh" ]
+ENTRYPOINT [ "./c-build/robots" ]

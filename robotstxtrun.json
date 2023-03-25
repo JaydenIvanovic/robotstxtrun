@@ -1,0 +1,6 @@
+{
+  "domain": "example.org",
+  "userAgent": "Googlebot",
+  "disallowedPaths": ["/this/should/be/disallowed"],
+  "allowedPaths": ["/this/should/be/allowed"]
+}
